@@ -8,11 +8,11 @@ void Thread()
 
 	VirtualProtect((unsigned char*)0x704E8A, 5, PAGE_EXECUTE_READWRITE, &OldProtect);
 
-	*(unsigned char*)0x704E8A = 232;
-	*(unsigned char*)0x704E8B = 17; 
-	*(unsigned char*)0x704E8C = 226;
-	*(unsigned char*)0x704E8D = 255;
-	*(unsigned char*)0x704E8E = 255;
+	*(unsigned char*)0x704E8A = 0xE8;
+	*(unsigned char*)0x704E8B = 0x11; 
+	*(unsigned char*)0x704E8C = 0xE2;
+	*(unsigned char*)0x704E8D = 0xFF;
+	*(unsigned char*)0x704E8E = 0xFF;
 
 	if (fexists("blur.ini"))
 	{
@@ -22,7 +22,7 @@ void Thread()
 	{
 		WritePrivateProfileString("Settings", "BlurLevel", "36", "./blur.ini");
 
-		*(unsigned char*)0x8D5104 = 36;
+		*(unsigned char*)0x8D5104 = 0x24;
 	}
 }
 
