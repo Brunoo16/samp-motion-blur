@@ -1,6 +1,6 @@
 #include "dllmain.h"
 
-void Thread()
+static void Thread()
 {
 	while (!*reinterpret_cast<int*>(0xB6F5F0)) Sleep(50);
 
